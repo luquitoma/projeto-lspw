@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <canvas id="meuCanvas"></canvas>
+        <script>
+            const canvas = document.getElementById('meuCanvas');
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            const rectX = canvas.width * 0.45;
+            const rectY = canvas.height * 0.3;
+            const rectLargura = canvas.width * 0.1;
+            const rectAltura = canvas.height * 0.075;
+
+            ctx.fillStyle = '#89b4fa';
+            ctx.fillRect(rectX, rectY, rectLargura, rectAltura);
+
+            rectX = canvas.width * 0.45;
+            rectY = canvas.height * 0.8;
+            rectLargura = canvas.width * 0.1;
+            rectAltura = canvas.height * 0.075;
+
+            ctx.fillStyle = '#89b4fa';
+            ctx.fillRect(rectX, rectY, rectLargura, rectAltura);
+
+        </script>
+    </body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: lightgray;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block;
+            background-color: white ;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</html>
